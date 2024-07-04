@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Primary color scheme */
+  --primary-color: #4a008f; /* Medium blue */
+  --primary-color-light: #aa50ff; /* Light blue */
+  --primary-color-dark: #2c0055; /* Dark blue */
+
+  /* Secondary color scheme */
+  --secondary-color: #000000; /* Black */
+  --secondary-color-light: #333333; /* Dark gray */
+  --secondary-color-dark: #000000; /* Black (repeated for consistency) */
+
+  /* Additional colors */
+  --background-color: #ffffff; /* White */
+  --text-color: #333333; /* Dark gray for text */
+  --highlight-color: #b8ffb8; /* Bright green for highlights */
+  --highlight-bg-color: #2bff2b; /* Bright green for highlights */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow color */
+
+  /* Font settings */
+  --primary-font: "Poppins", sans-serif;
+  --primary-text: "Poppins", sans-serif;
+}
+
+/* Apply colors and fonts to body and global elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color-light);
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-color);
+} */
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: var(--primary-font);
+}
+
+button:hover {
+  background-color: var(--primary-color-light);
+}
+
+input,
+textarea {
+  border: 1px solid var(--primary-color-dark);
+  padding: 10px;
+  font-family: var(--primary-font);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+hr {
+  border: 1px solid var(--primary-color-light);
+}
+
+::selection {
+  background: var(--highlight-color);
+  color: var(--secondary-color);
+}
+
+/* Additional global styles as needed */

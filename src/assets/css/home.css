@@ -1,0 +1,308 @@
+@import url("root.css");
+
+/* General Section Styling */
+section {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Container Styling */
+.mains {
+  background-color: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Back to Top Button Styling */
+.backtopdiv {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.topicon {
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Main Content Styling */
+.main_content {
+  text-align: center;
+  padding: 20px;
+}
+
+.head h1 {
+  margin-left: 7.5%;
+  max-width: 85%;
+  overflow: hidden;
+  font-size: 2.85em;
+  font-weight: 250;
+  color: #250139;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.tit_div h4 {
+  font-size: 10em;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 150;
+  position: relative;
+}
+
+/* Logos Container Styling */
+.logos_container {
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+  gap: 20px; /* Gap between logo items */
+}
+
+.row_container {
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+}
+
+.cpsimg {
+  max-width: 150px; /* Ensure images don't exceed their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.gac_img {
+  align-self: center;
+  max-width: 400px; /* Ensure images don't exceed their container */
+  height: 100px; /* Maintain aspect ratio */
+}
+
+/* Countdown and Dates Styling */
+.dates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.countdown {
+  margin: 20px;
+}
+.countdown,
+.date_details {
+  text-align: center;
+}
+
+.countdown h3,
+.event h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.countdown h3 {
+  font-size: 2.5rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.time-box {
+  text-align: center;
+  margin: 25px;
+  padding: 100px; /* Increased padding for larger boxes */
+  border: 1.5px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-box span {
+  font-size: 3em;
+  display: block;
+  color: #8400ff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.time-box p {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 25px;
+  color: #000000;
+  font-weight: 300;
+}
+
+.date_details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.event {
+  height: 150px;
+  background-color: rgba(227, 175, 255, 0.906);
+  border: 1px solid #c04aff;
+  width: calc(33.33% - 20px); /* Adjusted width for three items per row */
+  padding: 15px;
+  margin-bottom: 20px; /* Increased margin for separation */
+  border-radius: 8px;
+  box-shadow: 0 0 15px #c04aff;
+  text-align: center;
+}
+
+.event h3 {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+.event span {
+  font-size: 14px;
+  color: #000000;
+}
+
+.event_box_01 {
+  margin-top: -10%;
+}
+.event_box_03 {
+  margin-top: 10%;
+}
+.event_box_04 {
+  margin-top: -10%;
+}
+.event_box_06 {
+  margin-top: 10%;
+}
+
+/* About Section Styling */
+.about_container {
+  margin: 20px auto;
+  padding: 20px;
+}
+.about_section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.603);
+}
+
+.about_heads h2 {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about_contents p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.about_heads h2 {
+  font-size: 20px;
+}
+.about_contents p {
+  font-size: 14px;
+}
+
+/* Alternate Background Color */
+.about_section:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.about_section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover Effect */
+.about_section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  section {
+    height: auto;
+  }
+  .main_content {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .head h1 {
+    width: 100%;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .tit_div h4 {
+    font-weight: 200;
+    font-size: 1.5rem;
+  }
+  .logos_container {
+    gap: 10px;
+    width: 100%;
+  }
+  .cpsimg {
+    width: 100px;
+  }
+  .gac_img {
+    width: 200px;
+    height: 70px;
+  }
+  .countdown h3 {
+    font-size: 18px;
+  }
+  .time-box {
+    padding: 15px;
+    margin: 2px;
+  }
+  .time-box span {
+    font-size: 18px;
+  }
+  .time-box p {
+    font-size: 14px;
+  }
+  .date_details {
+    display: flex;
+    flex-direction: column;
+  }
+  .event {
+    width: 100%;
+    padding: 10px;
+  }
+  .event h3 {
+    font-size: 1.5rem;
+    font-weight: 250;
+  }
+  .event span {
+    font-size: 14px;
+  }
+  .about_container {
+    padding: 10px;
+  }
+  .backtopdiv {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+  }
+}
