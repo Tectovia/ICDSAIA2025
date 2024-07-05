@@ -26,7 +26,7 @@ const Home = () => {
         {/* Date Details */}
         <DateDeatils />
       </section>
-      <section>
+      <section className="about_section">
         {/* Abouts */}
         <About />
       </section>

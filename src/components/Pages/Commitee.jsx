@@ -232,7 +232,7 @@ const Committee = () => {
       <div className="about_heads">
         <h2>International Advisory Committee</h2>
       </div>
-      <div className="advisory reveal">
+      <div className="advisory reveal text-black">
         <h3>
           Dr. Balamurugan Easwaran,<br />
           Professor & Registrar, Texila American University, Zambia, West Africa.

@@ -1,36 +1,77 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-const DateDeatils = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const DateDetails = () => {
+  const eventRefs = useRef([]);
+  const lineRef = useRef(null);
+
+  useEffect(() => {
+    // Animate the line
+    gsap.fromTo(
+      lineRef.current,
+      { height: 0 },
+      {
+        height: "100%",
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: lineRef.current,
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    // Animate the events
+    eventRefs.current.forEach((ref, index) => {
+      gsap.fromTo(
+        ref,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: ref,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+          delay: index * 0.3,
+        }
+      );
+    });
+  }, []);
+
   return (
-    <div>
+    <div className="date_details_container">
+      <div className="line" ref={lineRef}></div>
       <div className="date_details">
-        <div className="event event_box_01">
-          <h3>Submission of Abstract</h3>
-          <span>November 10, 2024</span>
-        </div>
-        <div className="event event_box_02">
-          <h3>Submission of Full Paper</h3>
-          <span>November 30, 2024</span>
-        </div>
-        <div className="event event_box_03">
-          <h3>Authors Acceptance Notification</h3>
-          <span>December 30, 2024</span>
-        </div>
-        <div className="event event_box_04">
-          <h3>Final Manuscript Due</h3>
-          <span>January 15, 2025</span>
-        </div>
-        <div className="event event_box_05">
-          <h3>Registration deadline</h3>
-          <span>January 16, 2025 (Open)</span>
-        </div>
-        <div className="event event_box_06">
-          <h3>Conference Dates</h3>
-          <span>February 27 & 28, 2025</span>
-        </div>
+        {[
+          { title: "Submission of Abstract", date: "November 10, 2024" },
+          { title: "Submission of Full Paper", date: "November 30, 2024" },
+          { title: "Authors Acceptance Notification", date: "December 30, 2024" },
+          { title: "Final Manuscript Due", date: "January 15, 2025" },
+          { title: "Registration Deadline", date: "January 16, 2025 (Open)" },
+          { title: "Conference Dates", date: "February 27 & 28, 2025" },
+        ].map((event, index) => (
+          <div
+            className={`event event_box_0${index + 1}`}
+            key={index}
+            ref={(el) => (eventRefs.current[index] = el)}
+          >
+            <h3>{event.title}</h3>
+            <span>{event.date}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default DateDeatils;
+export default DateDetails;
