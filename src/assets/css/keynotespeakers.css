@@ -1,0 +1,93 @@
+@import url(root.css);
+  .mains {
+    padding: 20px;
+  }
+  
+  .subm_head {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .subm_head h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .lines {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    margin: 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .spk_card {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    background: var(--gradient);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .spk_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .spk_img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: aliceblue;
+  }
+  
+  .dr_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .spk_cont {
+    margin-top: 20px;
+    padding: 0 20px 20px;
+  }
+  
+  .spk_cont h3 {
+    color: #331c72;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .spk_cont span {
+    font-size: 0.9em;
+    color: black;
+  }
+  
+  @media only screen and (max-width: 574px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .spk_card {
+      width: 90%;
+    }
+  
+    .lines {
+      width: 75%;
+    }
+  }
+  

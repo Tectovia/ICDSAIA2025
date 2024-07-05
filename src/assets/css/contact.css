@@ -1,0 +1,56 @@
+@import url(root.css);
+
+.mains {
+  padding: 20px;
+}
+
+.subm_head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subm_head h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.lines {
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.contact_container {
+  text-align: center;
+  padding: 20px;
+  background: var(--third-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mail_contact {
+  margin-top: 20px;
+}
+
+.mail_contact a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: var(--fifth-color);
+  transition: color 0.3s;
+}
+
+.mail_contact a:hover {
+  color: var(--first-color);
+}
+
+.about_heads h2 {
+  font-size: 1.8em;
+  color: var(--fifth-color);
+}
+
+@media only screen and (max-width: 574px) {
+  .mail_contact a {
+    font-size: 1.2em;
+  }
+}

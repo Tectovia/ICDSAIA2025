@@ -1,6 +1,6 @@
 import React from "react";
 import GASC from "../../assets/images/logos/gac.jpg";
-import IEEE from "../../assets/images/logos/IEEE.png";
+import IEEE from "../../assets/images/logos/IEEE_Logo.png";
 
 const Logos = () => {
   return (

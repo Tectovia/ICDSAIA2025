@@ -1,0 +1,76 @@
+@import url(root.css);
+.mains {
+  padding: 20px;
+}
+
+.subm_head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subm_head h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.lines {
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.about_contents p {
+  text-align: center;
+}
+
+.track1 {
+  margin-top: 20px;
+}
+
+.about_heads {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about_heads h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.call_list {
+  background: #ffffff;
+  width: 50%;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.call_list ul {
+  margin-left: 20%;
+  padding: 20px 0;
+}
+
+.call_list ul li {
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 574px) {
+  .call_list {
+    width: 95%;
+  }
+
+  .call_list ul {
+    margin-left: 0;
+    padding: 10%;
+  }
+
+  .call_list ul li {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+  }
+}
