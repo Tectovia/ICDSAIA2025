@@ -7,6 +7,7 @@ import Countdown from "../Home_Components/Countdown";
 import DateDeatils from "../Home_Components/Date_Deatils";
 import About from "../Home_Components/H_About";
 import Head from "../Home_Components/H_Head";
+import Footer from "../Static/Footer";
 
 const Home = () => {
   return (
